@@ -1,18 +1,19 @@
-// Definizione di una funzione chiamata somma
-function somma(a, b){
-    alert (a + b);
+const Palidroma = prompt("Palidroma: Scrivi una parola:", "otto")
+
+// funzione per Palidroma
+function validator() {
+
+    const parola = Palidroma.length; // length lunghezza
+ 
+    // per verificare se le metà della parola sono uguali
+    for(let i = 0; i < parola / 2; i++) {
+
+        if(Palidroma[i] !== Palidroma[parola - 1 - i]) {
+            alert("Non è una parola Palidroma")
+        }
+    }
+    alert("E' una parola Palidroma")
 }
 
-function somma(a, b){
-    alert (a + b);
-}
-
-  
-  
-// somma 3 e 4, 5 e 80
-var risultato = somma(5, 5);
-var risultato2 = somma(5, 80);
-// 10
-console.log(risultato);
-// 85
-console.log(risultato2);
+const value = validator(Palidroma)
+console.log(value)
